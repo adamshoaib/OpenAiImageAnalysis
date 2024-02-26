@@ -9,9 +9,10 @@ export async function sensMSGToOpenAI({
   prompt,
   image,
   model = "gpt-4-vision-preview",
+  tokens = 2000,
 }) {
   const res = await openai.chat.completions.create({
-    max_tokens: 4096,
+    max_tokens: tokens,
     messages: [
       {
         role: "user",
