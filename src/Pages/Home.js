@@ -12,13 +12,14 @@ const Home = () => {
   };
 
   const handleSubmit = () => {
+    setSubmittedText("");
     if (image && inputText) {
       setLoading(true);
       sensMSGToOpenAI({
         prompt: inputText,
         image: image,
         model: "gpt-4-vision-preview", // For Image analysis use this model
-        tokens: 2000, // no of response length
+        tokens: 500, // no of response length
       }).then((res) => {
         setSubmittedText(res?.choices[0]?.message?.content);
         setLoading(false);

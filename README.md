@@ -1,5 +1,7 @@
 ### REACT JS OPEN AI IMAGE ANALYSIS
 
+![Demo](./src/OpenAiGif.gif)
+
 1. Upload any Image.
 2. Enter the prompt.
 3. Generate Results.
